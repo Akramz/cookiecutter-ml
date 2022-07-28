@@ -36,6 +36,13 @@ Features
 Quickstart
 ----------
 
+Create a new Conda environment and install `pip`::
+
+    conda create -n [ENV_NAME] python=3.9 --yes
+    conda activate [ENV_NAME]
+    conda install -c conda-forge mamba --yes
+    mamba install pip --yes
+
 Install the latest Cookiecutter if you haven't installed it yet (this requires
 Cookiecutter 1.4.0 or higher)::
 
