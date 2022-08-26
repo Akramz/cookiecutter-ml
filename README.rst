@@ -38,10 +38,10 @@ Quickstart
 
 Create a new Conda environment and install `pip`::
 
-    conda create -n [ENV_NAME] python=3.9 --yes
+    conda install -c conda-forge mamba
+    mamba env create -n [ENV_NAME] -f environment.yml
     conda activate [ENV_NAME]
-    conda install -c conda-forge mamba --yes
-    mamba install pip --yes
+    jupyter contrib nbextension install --user
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires
 Cookiecutter 1.4.0 or higher)::
@@ -64,7 +64,7 @@ Then:
 * Release your package by pushing a new tag to master.
 * Add a ``requirements.txt`` file that specifies the packages you will need for
   your project and their versions. For more info see the `pip docs for requirements files`_.
-* Add a ``environment.yml`` file that specifies the conda packages you will need for your project and their versions.
+* Install the current package: ``pip install -e .``
 * Activate your project on `pyup.io`_.
 
 .. _`pip docs for requirements files`: https://pip.pypa.io/en/stable/user_guide/#requirements-files
