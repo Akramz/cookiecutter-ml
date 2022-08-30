@@ -47,9 +47,8 @@ Generate a Python package project::
 
 Create a new Conda environment and install `pip`::
 
-    conda install -c conda-forge mamba
     cd [PROJECT_NAME]/
-    mamba env create -n [ENV_NAME] -f environment.yml
+    conda env create -n [ENV_NAME] -f environment.yml
     conda activate [ENV_NAME]
     jupyter contrib nbextension install --user
 
