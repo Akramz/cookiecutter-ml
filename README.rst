@@ -36,13 +36,6 @@ Features
 Quickstart
 ----------
 
-Create a new Conda environment and install `pip`::
-
-    conda install -c conda-forge mamba
-    mamba env create -n [ENV_NAME] -f environment.yml
-    conda activate [ENV_NAME]
-    jupyter contrib nbextension install --user
-
 Install the latest Cookiecutter if you haven't installed it yet (this requires
 Cookiecutter 1.4.0 or higher)::
 
@@ -52,9 +45,17 @@ Generate a Python package project::
 
     cookiecutter https://github.com/Akramz/cookiecutter-ml.git
 
+Create a new Conda environment and install `pip`::
+
+    conda install -c conda-forge mamba
+    cd [PROJECT_NAME]/
+    mamba env create -n [ENV_NAME] -f environment.yml
+    conda activate [ENV_NAME]
+    jupyter contrib nbextension install --user
+
 Then:
 
-* Create a repo and put it there.
+* Create a GitHub repo and put it there.
 * Add the repo to your Travis-CI_ account.
 * Install the developer requirements into a conda environment (``pip install -r requirements_dev.txt``).
 * Register_ your project with PyPI.
