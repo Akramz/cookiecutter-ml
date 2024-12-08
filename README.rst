@@ -30,8 +30,56 @@ Features
 * bump2version_: Pre-configured version bumping with a single command
 * Auto-release to PyPI_ when you push a new tag to master (optional)
 * Command line interface using Click (optional)
+* Experiment configuration using Pydantic and YAML
+* Reproducible experiments with structured config files
 
-.. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
+Configuration System
+-------------------
+
+This template includes a robust configuration system for managing experiment parameters:
+
+* Uses Pydantic_ for type validation and YAML for configuration files
+* Default ``config.py`` with extensible base configuration
+* Example configurations in ``configs/`` directory
+
+Basic Usage
+~~~~~~~~~~
+
+1. Define experiment parameters in ``configs/my_experiment.yaml``::
+
+    experiment_name: "my_experiment"
+    data_source: "csv"
+    input_paths: 
+      - "data/raw/sample.csv"
+    output_dir: "outputs/my_experiment/"
+    random_seed: 42
+    n_jobs: 4
+
+2. Load and validate configuration in your script::
+
+    from myproject.config import ExperimentConfig
+    import yaml
+
+    def main():
+        # Load and validate config
+        with open("configs/my_experiment.yaml") as f:
+            config = ExperimentConfig(**yaml.safe_load(f))
+        
+        # Use config in your experiment
+        print(f"Running: {config.experiment_name}")
+        # Your experiment code here...
+
+    if __name__ == "__main__":
+        main()
+
+Benefits
+~~~~~~~~
+
+* Type validation and automatic error checking
+* Default values for common parameters
+* Experiment reproducibility through version-controlled configs
+* Clear documentation of all parameters
+* Extensible for both ML and general data science projects
 
 Quickstart
 ----------

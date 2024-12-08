@@ -107,3 +107,4 @@ ENV/
 
 # Notebooks are for local experimentation, scripts should be the final product
 notebooks/
+outputs/
