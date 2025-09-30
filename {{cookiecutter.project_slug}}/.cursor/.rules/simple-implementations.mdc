@@ -1,0 +1,7 @@
+--- 
+description: Favor simple yet efficient implementations
+globs: ["**/*.py"]
+alwaysApply: true
+---
+
+Favor simple yet efficient implementations. Keep code minimal and effective.
