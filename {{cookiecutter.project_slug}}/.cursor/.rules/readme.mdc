@@ -1,9 +1,0 @@
---- 
-description: Always ground answers in README
-globs: ["**/*"]
-alwaysApply: true
----
-
-Before answering any request in this repository:
-1) Load and skim @README.md. If it’s large, retrieve the most relevant sections.
-2) when you are done, reflect the changes in @README.md.
