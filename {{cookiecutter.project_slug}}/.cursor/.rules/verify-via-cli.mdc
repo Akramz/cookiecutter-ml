@@ -1,7 +1,0 @@
---- 
-description: Verify via CLI instead of writing test files
-globs: ["**/*.py"]
-alwaysApply: true
----
-
-Don't write test files. Instead, verify core functionality by running minimal CLI commands to check if the implementation works.

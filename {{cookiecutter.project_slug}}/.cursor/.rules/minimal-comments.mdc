@@ -1,7 +1,0 @@
---- 
-description: Only comment complex code, no docs or obvious comments
-globs: ["**/*.py"]
-alwaysApply: true
----
-
-Only write comments for complex logic. Do not add docstrings or obvious comments.
