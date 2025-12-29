@@ -86,6 +86,16 @@ Custom commands available for common data science workflows:
 
 Usage: Type the command in Claude Code to trigger the workflow.
 
+## Claude Code Hooks
+
+Hooks run automatically in response to Claude Code events:
+
+| Hook | Trigger | Description |
+|------|---------|-------------|
+| `format-python.py` | After Edit/Write | Auto-formats Python files with ruff (formatting + import sorting) |
+
+The formatting hook runs `ruff check --fix --select I` (import sorting) and `ruff format` on any Python file after edits.
+
 ## Claude Code Skills
 
 Skills are automatically invoked by Claude when relevant to your task:
