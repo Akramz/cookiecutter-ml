@@ -86,6 +86,22 @@ Custom commands available for common data science workflows:
 
 Usage: Type the command in Claude Code to trigger the workflow.
 
+## Claude Code Skills
+
+Skills are automatically invoked by Claude when relevant to your task:
+
+| Skill | Description |
+|-------|-------------|
+| `gee-imagery` | Download remote sensing imagery from Google Earth Engine |
+
+**GEE Imagery Skill** - Automatically activates when you mention:
+- "Download satellite imagery"
+- "Get Sentinel/Landsat/MODIS data"
+- "Acquire imagery for region"
+- "Export from Earth Engine"
+
+Example: "Download Sentinel-2 imagery for my study area from 2023"
+
 ## Rules
 - Delete unused or obsolete files when your changes make them irrelevant (refactors, feature removals, etc.), and revert files only when the change is yours or explicitly requested. If a git operation leaves you unsure about other agents' in-flight work, stop and coordinate instead of deleting.
 - **Before attempting to delete a file to resolve a local type/lint failure, stop and ask the user.** Other agents are often editing adjacent files; deleting their work to silence an error is never acceptable without explicit approval.
