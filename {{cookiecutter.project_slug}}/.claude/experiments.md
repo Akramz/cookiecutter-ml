@@ -1,5 +1,7 @@
 # Experiment Rules
 
+> **Quick Start:** Use the `/new-experiment` slash command to create experiments interactively.
+
 ## Two Types of Experiments
 
 ### Type 1: Existing Hyperparameter (Config-Only)

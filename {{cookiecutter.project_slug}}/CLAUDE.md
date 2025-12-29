@@ -76,6 +76,16 @@ python scripts/infer.py --model_path <path> --input <path>         # Inference
 - PyTorch Lightning for training logic
 - Factory functions for models/datasets (see `models.py`, `datasets.py`)
 
+## Claude Code Slash Commands
+
+Custom commands available for common data science workflows:
+
+| Command | Description |
+|---------|-------------|
+| `/new-experiment` | Create a new experiment (config-only or with new hyperparameter) |
+
+Usage: Type the command in Claude Code to trigger the workflow.
+
 ## Rules
 - Delete unused or obsolete files when your changes make them irrelevant (refactors, feature removals, etc.), and revert files only when the change is yours or explicitly requested. If a git operation leaves you unsure about other agents' in-flight work, stop and coordinate instead of deleting.
 - **Before attempting to delete a file to resolve a local type/lint failure, stop and ask the user.** Other agents are often editing adjacent files; deleting their work to silence an error is never acceptable without explicit approval.
